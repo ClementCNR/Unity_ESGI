@@ -7,28 +7,44 @@ using UnityStandardAssets.Vehicles.Car;
 public class Eliminated : MonoBehaviour
 {
     // Trigger = boite de collision ou collider 
-    private Animation anim;
+    public Animation anim;
+    public GameObject player;
+
 
     void Start()
     {
         anim = gameObject.GetComponent<Animation>();
     }
 
-    void OnTriggerEnter(Collider col) // se lit qd col entre ds la boite de collision (le trigger) de l'objet à qui le script est associé
+    void OnTriggerExit(Collider col) // se lit qd col sort de la boite de collision (le trigger) de l'objet à qui le script est associé
                                       // col correspond à l'objet qui entre dans la zone
     {
-        if (/*col.name == "ColliderBottom" || */col.name == "ColliderBody"/* || col.name == "ColliderFront"*/)        // ColliderBottom == hitbox de la voiture
+        if (col.name == "ColliderBody")        // ColliderBottom == hitbox de la voiture
         {
 
-            Transform.Destroy(GetComponent<CarController>());
+            if(col.CompareTag("Player"))
+            {
+                print("Joueur elimine");
 
-            string s = string.Format("Car {0} eliminated", col.name);
-            print(s);
-            //anim.Play(";
+                Destroy(col.gameObject);
+                //Destroy(player);
+                //Destroy(col.transform.parent.parent.gameObject);
+                
+            }
+            else
+            {
+                string s = string.Format("Enemi {0} elimine", col.GetInstanceID());
+                print(s);
+                Destroy(col.transform.parent.parent.gameObject);
+            }
+
+            //anim.Play("anim");
 
 
         }
 
     }
+
+
 
 }

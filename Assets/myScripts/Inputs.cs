@@ -5,7 +5,6 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class Inputs : MonoBehaviour // classe Input permet de récupérer les touches, souris utilisées pour effectuer des actions
 {
-    int maxAi = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +17,9 @@ public class Inputs : MonoBehaviour // classe Input permet de récupérer les touc
         if (Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("Touche Z détectée");
-            maxAi--;
-            //Transform.Destroy(GetComponent<CarController>());
-            Transform.Instantiate(GetComponent<CarAIControl>(), new Vector3(0, 1, 0), Quaternion.identity);
-            //Transform.Destroy(GetComponent<CarAIControl>());
         }
 
- /*       if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z))
         {
             Debug.Log("Touche Z détectée, appui long");
         }
@@ -73,7 +68,7 @@ public class Inputs : MonoBehaviour // classe Input permet de récupérer les touc
         {
             Debug.Log("La souris se déplace vers le bas.");
         }
-*/
+
 
 
     }

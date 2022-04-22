@@ -54,10 +54,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+    <Compile Include="Assets\myScripts\Eliminated.cs" />
     <Compile Include="Assets\myScripts\Checkpoint.cs" />
+    <Compile Include="Assets\myScripts\Inputs.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\myScripts\CarWave.cs" />
     <Compile Include="Assets\myScripts\Respawn.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
@@ -65,9 +68,8 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\myScripts\Speed.cs" />
-    <Compile Include="Assets\myScripts\Inputs.cs" />
-    <Compile Include="Assets\myScripts\Eliminated.cs" />
-    <Compile Include="Assets\myScripts\CarWave.cs" />
+    <Compile Include="Assets\myScripts\CountEnemy.cs" />
+    <Compile Include="Assets\myScripts\ColBetweenCarsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
